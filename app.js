@@ -111,6 +111,10 @@ async function cargarMenu() {
     if (!menuHoy) {
       $("dia").textContent = fechaBonita();
       $("contenido-hoy").innerHTML = "No hay menú cargado para hoy.";
+
+      const seccionSemana = document.querySelector(".week");
+      seccionSemana.style.display = "none";
+
       return;
     }
 
@@ -118,9 +122,19 @@ async function cargarMenu() {
     $("contenido-hoy").innerHTML = pintarBloque(menuHoy);
 
     const semana = $("semana");
+    const seccionSemana = document.querySelector(".week");
+    const diasFuturos = diasVisiblesDesdeManana();
+
     semana.innerHTML = "";
 
-    diasVisiblesDesdeManana().forEach(dia => {
+    if (diasFuturos.length === 0) {
+      seccionSemana.style.display = "none";
+      return;
+    }
+
+    seccionSemana.style.display = "block";
+
+    diasFuturos.forEach(dia => {
       const menu = datos[dia];
 
       if (!menu) return;
@@ -139,6 +153,9 @@ async function cargarMenu() {
   } catch (error) {
     $("dia").textContent = "Hoy";
     $("contenido-hoy").innerHTML = "No se ha podido cargar el menú.";
+
+    const seccionSemana = document.querySelector(".week");
+    seccionSemana.style.display = "none";
   }
 }
 
