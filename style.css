@@ -132,13 +132,7 @@ h1 {
 }
 
 .today-card h2 {
-  margin: 0 0 16px 0;
-
-  font-size: 32px;
-
-  font-weight: 900;
-
-  line-height: 1.05;
+  display: none;
 }
 
 .menu-text {
