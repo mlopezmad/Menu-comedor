@@ -1,7 +1,7 @@
-// Cambia esta URL por la dirección pública de tu menu.json
 const MENU_URL = "menu.json";
 
 const dias = ["domingo", "lunes", "martes", "miercoles", "jueves", "viernes", "sabado"];
+
 const nombresBonitos = {
   lunes: "Lunes",
   martes: "Martes",
@@ -24,7 +24,21 @@ function pintarFecha() {
     day: "numeric",
     month: "long"
   }).format(new Date());
+
   $("fecha").textContent = fecha;
+}
+
+function pintarBloque(menu) {
+  return `
+    <h3>Primeros</h3>
+    <ul>${menu.primeros.map(x => `<li>${x}</li>`).join("")}</ul>
+
+    <h3>Segundos</h3>
+    <ul>${menu.segundos.map(x => `<li>${x}</li>`).join("")}</ul>
+
+    <h3>Dieta y plancha</h3>
+    <ul>${menu.dieta.map(x => `<li>${x}</li>`).join("")}</ul>
+  `;
 }
 
 async function cargarMenu() {
@@ -36,23 +50,40 @@ async function cargarMenu() {
 
     const datos = await respuesta.json();
     const hoy = claveDeHoy();
-    const menuHoy = datos[hoy] || "No hay menú cargado para hoy.";
+    const menuHoy = datos[hoy];
+
+    if (!menuHoy) {
+      $("dia").textContent = "Hoy";
+      $("contenido-hoy").textContent = "No hay menú cargado para hoy.";
+      return;
+    }
 
     $("dia").textContent = nombresBonitos[hoy];
-    $("menuHoy").textContent = menuHoy;
+    $("contenido-hoy").innerHTML = pintarBloque(menuHoy);
 
-    const orden = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"];
-    $("listaSemana").innerHTML = orden.map(dia => `
-      <article class="day-row ${dia === hoy ? "today" : ""}">
-        <strong>${nombresBonitos[dia]}</strong>
-        <span>${datos[dia] || "Sin menú"}</span>
-      </article>
-    `).join("");
+    const semana = $("semana");
+    semana.innerHTML = "";
+
+    ["lunes", "martes", "miercoles", "jueves", "viernes"].forEach(dia => {
+      const menu = datos[dia];
+      if (!menu) return;
+
+      const card = document.createElement("div");
+      card.className = "card";
+      if (dia === hoy) card.classList.add("actual");
+
+      card.innerHTML = `
+        <h2>${nombresBonitos[dia]}</h2>
+        ${pintarBloque(menu)}
+      `;
+
+      semana.appendChild(card);
+    });
+
   } catch (error) {
-    $("menuHoy").textContent = "No se ha podido cargar el menú. Revisa la conexión o la URL del archivo.";
-    $("listaSemana").innerHTML = "";
+    $("dia").textContent = "Hoy";
+    $("contenido-hoy").textContent = "No se ha podido cargar el menú. Revisa la conexión o la URL del archivo.";
   }
 }
 
-$("recargar").addEventListener("click", cargarMenu);
-cargarMenu();
+document.addEventListener("DOMContentLoaded", cargarMenu);
