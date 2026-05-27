@@ -27,7 +27,7 @@ body {
   background:
     radial-gradient(
       circle at top right,
-      rgba(227,6,19,0.16),
+      rgba(227,6,19,0.12),
       transparent 32%
     ),
     linear-gradient(
@@ -53,25 +53,18 @@ body {
     calc(40px + env(safe-area-inset-bottom));
 }
 
-/* HEADER */
+/* CABECERA */
 
 .hero {
   margin-top: 10px;
 }
 
-.hero-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
-}
-
 .mahou-logo {
-  width: 90px;
+  width: 115px;
   height: auto;
   display: block;
-  margin-bottom: 14px;
-  opacity: 0.9;
+  margin-bottom: 26px;
+  opacity: 1;
 }
 
 .eyebrow {
@@ -91,19 +84,26 @@ h1 {
   font-weight: 900;
 }
 
-/* CARDS */
+/* TARJETAS */
 
 .card {
-  background: var(--card);
+  background: rgba(255,255,255,0.88);
+
+  backdrop-filter: blur(12px);
+
   border-radius: var(--radius);
+
   border: 1px solid var(--border);
+
   box-shadow: var(--shadow);
+
   padding: 26px;
 }
 
 .today-card {
   margin-bottom: 28px;
-  border: 2px solid rgba(227, 6, 19, 0.12);
+
+  border: 2px solid rgba(227, 6, 19, 0.10);
 }
 
 .today-card h2 {
@@ -192,7 +192,9 @@ button {
   appearance: none;
   border: none;
   border-radius: 999px;
+
   background: var(--red);
+
   color: white;
 
   padding: 14px 24px;
@@ -208,7 +210,7 @@ button:active {
   transform: scale(0.98);
 }
 
-/* CARD ACTUAL */
+/* TARJETA ACTUAL */
 
 .actual {
   border: 3px solid var(--red);
@@ -227,6 +229,10 @@ button:active {
 
 @media (max-width: 700px) {
 
+  .mahou-logo {
+    width: 105px;
+  }
+
   h1 {
     font-size: 72px;
   }
@@ -242,9 +248,5 @@ button:active {
   button {
     font-size: 16px;
     padding: 12px 20px;
-  }
-
-  .mahou-logo {
-    width: 78px;
   }
 }
