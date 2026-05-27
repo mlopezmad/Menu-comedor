@@ -1,10 +1,11 @@
 :root {
-  --bg: #f5f2eb;
+  --bg: #f7efe7;
   --card: #ffffff;
   --text: #111111;
-  --muted: #7b746d;
-  --border: #e7e1d8;
-  --shadow: 0 8px 30px rgba(0,0,0,0.04);
+  --muted: #8a7268;
+  --red: #e30613;
+  --border: rgba(227, 6, 19, 0.12);
+  --shadow: 0 10px 30px rgba(0,0,0,0.06);
   --radius: 28px;
 }
 
@@ -16,13 +17,11 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: var(--bg);
   color: var(--text);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  background:
+    radial-gradient(circle at top right, rgba(227,6,19,0.16), transparent 32%),
+    linear-gradient(180deg, #f3e7dc 0%, #f7efe7 45%, #fbf8f3 100%);
 }
 
 body {
@@ -33,10 +32,7 @@ body {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding:
-    env(safe-area-inset-top)
-    22px
-    calc(40px + env(safe-area-inset-bottom));
+  padding: env(safe-area-inset-top) 22px calc(40px + env(safe-area-inset-bottom));
 }
 
 .hero {
@@ -47,7 +43,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--muted);
   margin: 0 0 6px 0;
 }
@@ -55,7 +51,7 @@ body {
 h1 {
   font-size: clamp(56px, 10vw, 86px);
   line-height: 0.92;
-  letter-spacing: -0.06em;
+  letter-spacing: -3px;
   margin: 0 0 24px 0;
   font-weight: 900;
 }
@@ -70,12 +66,13 @@ h1 {
 
 .today-card {
   margin-bottom: 28px;
+  border: 2px solid rgba(227, 6, 19, 0.12);
 }
 
 .today-card h2 {
   margin: 0 0 16px 0;
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .menu-text {
@@ -83,19 +80,19 @@ h1 {
 }
 
 .today-card h3 {
-  margin: 18px 0 8px 0;
+  margin: 10px 0 6px 0;
   font-size: 26px;
   line-height: 1.1;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .today-card ul {
-  margin: 0 0 14px 24px;
+  margin: 0 0 12px 24px;
   padding: 0;
 }
 
 .today-card li {
-  margin: 4px 0;
+  margin: 0;
   line-height: 1.25;
   font-size: 24px;
   font-weight: 600;
@@ -122,11 +119,16 @@ button {
   appearance: none;
   border: none;
   border-radius: 999px;
-  background: #111111;
+  background: var(--red);
   color: white;
   padding: 14px 24px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 800;
+  box-shadow: 0 6px 18px rgba(227,6,19,0.25);
+}
+
+button:active {
+  transform: scale(0.98);
 }
 
 .week-list {
@@ -142,7 +144,7 @@ button {
 .week-list .card h2 {
   margin: 0 0 14px 0;
   font-size: 30px;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .week-list h3 {
@@ -162,7 +164,7 @@ button {
 }
 
 .actual {
-  border: 3px solid #111111;
+  border: 3px solid var(--red);
 }
 
 .footer {
@@ -173,7 +175,6 @@ button {
 }
 
 @media (max-width: 700px) {
-
   h1 {
     font-size: 72px;
   }
@@ -190,79 +191,4 @@ button {
     font-size: 16px;
     padding: 12px 20px;
   }
-}
-.today-card {
-  min-height: auto !important;
-}
-
-.today-card h3 {
-  margin: 10px 0 6px 0 !important;
-}
-
-.today-card ul {
-  margin: 0 0 12px 24px !important;
-}
-
-.today-card li {
-  margin: 0 !important;
-}
-body {
-  background:
-    linear-gradient(
-      180deg,
-      #f5ede4 0%,
-      #f3eee7 40%,
-      #f7f4ef 100%
-    ) !important;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: -120px;
-  right: -120px;
-  width: 320px;
-  height: 320px;
-  background: radial-gradient(
-    circle,
-    rgba(227, 6, 19, 0.12) 0%,
-    rgba(227, 6, 19, 0) 70%
-  );
-  z-index: 0;
-  pointer-events: none;
-}
-
-.hero {
-  position: relative;
-}
-
-.hero * {
-  position: relative;
-  z-index: 1;
-}
-
-.today-card {
-  border: 2px solid rgba(227, 6, 19, 0.08);
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.05),
-    0 2px 10px rgba(227,6,19,0.04);
-}
-
-button {
-  background: #e30613 !important;
-  color: white !important;
-  border: none;
-  box-shadow: 0 6px 18px rgba(227,6,19,0.25);
-}
-
-button:active {
-  transform: scale(0.98);
-}
-
-.actual {
-  border: 3px solid #e30613 !important;
-}
-
-h1 {
-  letter-spacing: -3px;
 }
