@@ -53,28 +53,25 @@ body {
     calc(40px + env(safe-area-inset-bottom));
 }
 
-/* CABECERA */
+/* HEADER */
 
 .hero {
   margin-top: 10px;
 }
 
-.topbar {
+.hero-header {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
 }
 
 .mahou-logo {
-  width: 42px;
-  height: 42px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.topbar .eyebrow {
-  margin: 0;
+  width: 90px;
+  height: auto;
+  display: block;
+  margin-bottom: 14px;
+  opacity: 0.9;
 }
 
 .eyebrow {
@@ -94,7 +91,7 @@ h1 {
   font-weight: 900;
 }
 
-/* TARJETAS */
+/* CARDS */
 
 .card {
   background: var(--card);
@@ -189,10 +186,6 @@ h1 {
   font-size: 20px;
 }
 
-.actual {
-  border: 3px solid var(--red);
-}
-
 /* BOTÓN */
 
 button {
@@ -213,6 +206,12 @@ button {
 
 button:active {
   transform: scale(0.98);
+}
+
+/* CARD ACTUAL */
+
+.actual {
+  border: 3px solid var(--red);
 }
 
 /* FOOTER */
@@ -246,7 +245,6 @@ button:active {
   }
 
   .mahou-logo {
-    width: 36px;
-    height: 36px;
+    width: 78px;
   }
 }
