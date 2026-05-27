@@ -7,31 +7,51 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="Menú Hoy" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="apple-touch-icon" href="icon-192.png" />
+
   <title>Menú Hoy</title>
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <main class="app">
+
     <section class="hero">
       <p class="eyebrow" id="fecha">Cargando fecha…</p>
+
       <h1>Menú de hoy</h1>
+
       <div class="card today-card">
         <h2 id="dia">Hoy</h2>
-        <div id="menuHoy" class="menu-text">Cargando menú…</div>
+
+        <div id="contenido-hoy" class="menu-text">
+          Cargando menú…
+        </div>
       </div>
     </section>
 
     <section class="week">
+
       <div class="section-title">
         <h2>Semana</h2>
-        <button id="recargar">Actualizar</button>
+
+        <button id="recargar">
+          Actualizar
+        </button>
       </div>
-      <div id="listaSemana" class="week-list"></div>
+
+      <div id="semana" class="week-list"></div>
+
     </section>
 
-    <p class="footer">Añádela a la pantalla de inicio desde Safari: Compartir → Añadir a pantalla de inicio.</p>
+    <p class="footer">
+      Añádela a la pantalla de inicio desde Safari:
+      Compartir → Añadir a pantalla de inicio.
+    </p>
+
   </main>
 
   <script src="app.js"></script>
