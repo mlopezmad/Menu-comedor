@@ -191,3 +191,18 @@ button {
     padding: 12px 20px;
   }
 }
+.today-card {
+  min-height: auto !important;
+}
+
+.today-card h3 {
+  margin: 10px 0 6px 0 !important;
+}
+
+.today-card ul {
+  margin: 0 0 12px 24px !important;
+}
+
+.today-card li {
+  margin: 0 !important;
+}
