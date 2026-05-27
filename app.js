@@ -31,13 +31,19 @@ function pintarFecha() {
 function pintarBloque(menu) {
   return `
     <h3>Primeros</h3>
-    <ul>${menu.primeros.map(x => `<li>${x}</li>`).join("")}</ul>
+    <ul>
+      ${menu.primeros.map(x => `<li>${x}</li>`).join("")}
+    </ul>
 
     <h3>Segundos</h3>
-    <ul>${menu.segundos.map(x => `<li>${x}</li>`).join("")}</ul>
+    <ul>
+      ${menu.segundos.map(x => `<li>${x}</li>`).join("")}
+    </ul>
 
     <h3>Dieta y plancha</h3>
-    <ul>${menu.dieta.map(x => `<li>${x}</li>`).join("")}</ul>
+    <ul>
+      ${menu.dieta.map(x => `<li>${x}</li>`).join("")}
+    </ul>
   `;
 }
 
@@ -45,8 +51,13 @@ async function cargarMenu() {
   pintarFecha();
 
   try {
-    const respuesta = await fetch(`${MENU_URL}?t=${Date.now()}`, { cache: "no-store" });
-    if (!respuesta.ok) throw new Error("No se pudo cargar el menú");
+    const respuesta = await fetch(`${MENU_URL}?t=${Date.now()}`, {
+      cache: "no-store"
+    });
+
+    if (!respuesta.ok) {
+      throw new Error("No se pudo cargar el menú");
+    }
 
     const datos = await respuesta.json();
     const hoy = claveDeHoy();
@@ -54,7 +65,7 @@ async function cargarMenu() {
 
     if (!menuHoy) {
       $("dia").textContent = "Hoy";
-      $("contenido-hoy").textContent = "No hay menú cargado para hoy.";
+      $("contenido-hoy").innerHTML = "No hay menú cargado para hoy.";
       return;
     }
 
@@ -66,11 +77,15 @@ async function cargarMenu() {
 
     ["lunes", "martes", "miercoles", "jueves", "viernes"].forEach(dia => {
       const menu = datos[dia];
+
       if (!menu) return;
 
       const card = document.createElement("div");
       card.className = "card";
-      if (dia === hoy) card.classList.add("actual");
+
+      if (dia === hoy) {
+        card.classList.add("actual");
+      }
 
       card.innerHTML = `
         <h2>${nombresBonitos[dia]}</h2>
@@ -82,8 +97,12 @@ async function cargarMenu() {
 
   } catch (error) {
     $("dia").textContent = "Hoy";
-    $("contenido-hoy").textContent = "No se ha podido cargar el menú. Revisa la conexión o la URL del archivo.";
+    $("contenido-hoy").innerHTML =
+      "No se ha podido cargar el menú.";
   }
 }
 
 document.addEventListener("DOMContentLoaded", cargarMenu);
+
+document.getElementById("recargar")
+  .addEventListener("click", cargarMenu);
