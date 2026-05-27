@@ -1,6 +1,14 @@
 const MENU_URL = "menu.json";
 
-const dias = ["domingo", "lunes", "martes", "miercoles", "jueves", "viernes", "sabado"];
+const dias = [
+  "domingo",
+  "lunes",
+  "martes",
+  "miercoles",
+  "jueves",
+  "viernes",
+  "sabado"
+];
 
 const nombresBonitos = {
   lunes: "Lunes",
@@ -18,69 +26,108 @@ function claveDeHoy() {
   return dias[new Date().getDay()];
 }
 
-function pintarFecha() {
+function fechaBonita() {
   const fecha = new Intl.DateTimeFormat("es-ES", {
     weekday: "long",
     day: "numeric",
     month: "long"
   }).format(new Date());
 
-  $("fecha").textContent = fecha;
+  return fecha.charAt(0).toUpperCase() + fecha.slice(1);
+}
+
+function pintarFecha() {
+  $("fecha").textContent = fechaBonita();
 }
 
 function pintarBloque(menu) {
   return `
-    <h3>Primeros</h3>
-    <ul>
-      ${menu.primeros.map(x => `<li>${x}</li>`).join("")}
-    </ul>
+    <div style="margin-top:10px">
 
-    <h3>Segundos</h3>
-    <ul>
-      ${menu.segundos.map(x => `<li>${x}</li>`).join("")}
-    </ul>
+      <h3 style="margin:0 0 8px 0;">
+        Primeros
+      </h3>
 
-    <h3>Dieta y plancha</h3>
-    <ul>
-      ${menu.dieta.map(x => `<li>${x}</li>`).join("")}
-    </ul>
+      <ul style="margin:0 0 16px 22px; padding:0;">
+        ${menu.primeros.map(x => `<li>${x}</li>`).join("")}
+      </ul>
+
+      <h3 style="margin:0 0 8px 0;">
+        Segundos
+      </h3>
+
+      <ul style="margin:0 0 16px 22px; padding:0;">
+        ${menu.segundos.map(x => `<li>${x}</li>`).join("")}
+      </ul>
+
+      <h3 style="margin:0 0 8px 0;">
+        Dieta y plancha
+      </h3>
+
+      <ul style="margin:0 0 8px 22px; padding:0;">
+        ${menu.dieta.map(x => `<li>${x}</li>`).join("")}
+      </ul>
+
+    </div>
   `;
 }
 
 async function cargarMenu() {
+
   pintarFecha();
 
   try {
-    const respuesta = await fetch(`${MENU_URL}?t=${Date.now()}`, {
-      cache: "no-store"
-    });
+
+    const respuesta = await fetch(
+      `${MENU_URL}?t=${Date.now()}`,
+      {
+        cache: "no-store"
+      }
+    );
 
     if (!respuesta.ok) {
       throw new Error("No se pudo cargar el menú");
     }
 
     const datos = await respuesta.json();
+
     const hoy = claveDeHoy();
+
     const menuHoy = datos[hoy];
 
     if (!menuHoy) {
-      $("dia").textContent = "Hoy";
-      $("contenido-hoy").innerHTML = "No hay menú cargado para hoy.";
+
+      $("dia").textContent = fechaBonita();
+
+      $("contenido-hoy").innerHTML =
+        "No hay menú cargado para hoy.";
+
       return;
     }
 
-    $("dia").textContent = nombresBonitos[hoy];
-    $("contenido-hoy").innerHTML = pintarBloque(menuHoy);
+    $("dia").textContent = fechaBonita();
+
+    $("contenido-hoy").innerHTML =
+      pintarBloque(menuHoy);
 
     const semana = $("semana");
+
     semana.innerHTML = "";
 
-    ["lunes", "martes", "miercoles", "jueves", "viernes"].forEach(dia => {
+    [
+      "lunes",
+      "martes",
+      "miercoles",
+      "jueves",
+      "viernes"
+    ].forEach(dia => {
+
       const menu = datos[dia];
 
       if (!menu) return;
 
       const card = document.createElement("div");
+
       card.className = "card";
 
       if (dia === hoy) {
@@ -93,16 +140,27 @@ async function cargarMenu() {
       `;
 
       semana.appendChild(card);
+
     });
 
   } catch (error) {
+
     $("dia").textContent = "Hoy";
+
     $("contenido-hoy").innerHTML =
       "No se ha podido cargar el menú.";
+
   }
 }
 
-document.addEventListener("DOMContentLoaded", cargarMenu);
+document.addEventListener(
+  "DOMContentLoaded",
+  cargarMenu
+);
 
-document.getElementById("recargar")
-  .addEventListener("click", cargarMenu);
+document
+  .getElementById("recargar")
+  .addEventListener(
+    "click",
+    cargarMenu
+  );
