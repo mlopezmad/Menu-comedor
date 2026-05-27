@@ -59,25 +59,19 @@ function pintarBloque(menu) {
   return `
     <div style="margin-top:10px">
 
-      <h3 style="margin:0 0 8px 0;">
-        Primeros
-      </h3>
+      <h3 style="margin:0 0 8px 0;">Primeros</h3>
 
       <ul style="margin:0 0 16px 22px; padding:0;">
         ${menu.primeros.map(x => `<li>${x}</li>`).join("")}
       </ul>
 
-      <h3 style="margin:0 0 8px 0;">
-        Segundos
-      </h3>
+      <h3 style="margin:0 0 8px 0;">Segundos</h3>
 
       <ul style="margin:0 0 16px 22px; padding:0;">
         ${menu.segundos.map(x => `<li>${x}</li>`).join("")}
       </ul>
 
-      <h3 style="margin:0 0 8px 0;">
-        Dieta y plancha
-      </h3>
+      <h3 style="margin:0 0 8px 0;">Dieta y plancha</h3>
 
       <ul style="margin:0 0 8px 22px; padding:0;">
         ${menu.dieta.map(x => `<li>${x}</li>`).join("")}
@@ -87,7 +81,7 @@ function pintarBloque(menu) {
   `;
 }
 
-function diasVisiblesDesdeHoy() {
+function diasVisiblesDesdeManana() {
   const hoy = claveDeHoy();
   const indiceHoy = ordenDiasMenu.indexOf(hoy);
 
@@ -95,64 +89,44 @@ function diasVisiblesDesdeHoy() {
     return ordenDiasMenu;
   }
 
-  return ordenDiasMenu.slice(indiceHoy);
+  return ordenDiasMenu.slice(indiceHoy + 1);
 }
 
 async function cargarMenu() {
-
   pintarFecha();
 
   try {
-
-    const respuesta = await fetch(
-      `${MENU_URL}?t=${Date.now()}`,
-      {
-        cache: "no-store"
-      }
-    );
+    const respuesta = await fetch(`${MENU_URL}?t=${Date.now()}`, {
+      cache: "no-store"
+    });
 
     if (!respuesta.ok) {
       throw new Error("No se pudo cargar el menú");
     }
 
     const datos = await respuesta.json();
-
     const hoy = claveDeHoy();
-
     const menuHoy = datos[hoy];
 
     if (!menuHoy) {
-
       $("dia").textContent = fechaBonita();
-
-      $("contenido-hoy").innerHTML =
-        "No hay menú cargado para hoy.";
-
+      $("contenido-hoy").innerHTML = "No hay menú cargado para hoy.";
       return;
     }
 
     $("dia").textContent = fechaBonita();
-
-    $("contenido-hoy").innerHTML =
-      pintarBloque(menuHoy);
+    $("contenido-hoy").innerHTML = pintarBloque(menuHoy);
 
     const semana = $("semana");
-
     semana.innerHTML = "";
 
-    diasVisiblesDesdeHoy().forEach(dia => {
-
+    diasVisiblesDesdeManana().forEach(dia => {
       const menu = datos[dia];
 
       if (!menu) return;
 
       const card = document.createElement("div");
-
       card.className = "card";
-
-      if (dia === hoy) {
-        card.classList.add("actual");
-      }
 
       card.innerHTML = `
         <h2>${fechaParaDiaSemana(dia)}</h2>
@@ -160,27 +134,16 @@ async function cargarMenu() {
       `;
 
       semana.appendChild(card);
-
     });
 
   } catch (error) {
-
     $("dia").textContent = "Hoy";
-
-    $("contenido-hoy").innerHTML =
-      "No se ha podido cargar el menú.";
-
+    $("contenido-hoy").innerHTML = "No se ha podido cargar el menú.";
   }
 }
 
-document.addEventListener(
-  "DOMContentLoaded",
-  cargarMenu
-);
+document.addEventListener("DOMContentLoaded", cargarMenu);
 
 document
   .getElementById("recargar")
-  .addEventListener(
-    "click",
-    cargarMenu
-  );
+  .addEventListener("click", cargarMenu);
