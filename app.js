@@ -10,15 +10,13 @@ const dias = [
   "sabado"
 ];
 
-const nombresBonitos = {
-  lunes: "Lunes",
-  martes: "Martes",
-  miercoles: "Miércoles",
-  jueves: "Jueves",
-  viernes: "Viernes",
-  sabado: "Sábado",
-  domingo: "Domingo"
-};
+const ordenDiasMenu = [
+  "lunes",
+  "martes",
+  "miercoles",
+  "jueves",
+  "viernes"
+];
 
 const $ = (id) => document.getElementById(id);
 
@@ -89,6 +87,17 @@ function pintarBloque(menu) {
   `;
 }
 
+function diasVisiblesDesdeHoy() {
+  const hoy = claveDeHoy();
+  const indiceHoy = ordenDiasMenu.indexOf(hoy);
+
+  if (indiceHoy === -1) {
+    return ordenDiasMenu;
+  }
+
+  return ordenDiasMenu.slice(indiceHoy);
+}
+
 async function cargarMenu() {
 
   pintarFecha();
@@ -131,13 +140,7 @@ async function cargarMenu() {
 
     semana.innerHTML = "";
 
-    [
-      "lunes",
-      "martes",
-      "miercoles",
-      "jueves",
-      "viernes"
-    ].forEach(dia => {
+    diasVisiblesDesdeHoy().forEach(dia => {
 
       const menu = datos[dia];
 
