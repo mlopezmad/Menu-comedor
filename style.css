@@ -308,3 +308,58 @@ button:active {
     padding: 12px 20px;
   }
 }
+/* MODO OSCURO */
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+
+    --bg: #111111;
+
+    --card: rgba(28,28,30,0.92);
+
+    --text: #f5f5f7;
+
+    --muted: #9a9a9f;
+
+    --border: rgba(255,255,255,0.06);
+
+    --shadow:
+      0 10px 30px rgba(0,0,0,0.35);
+  }
+
+  html,
+  body {
+
+    background:
+      radial-gradient(
+        circle at top right,
+        rgba(227,6,19,0.18),
+        transparent 32%
+      ),
+      linear-gradient(
+        180deg,
+        #111111 0%,
+        #151515 45%,
+        #1b1b1b 100%
+      );
+  }
+
+  .card {
+
+    background: var(--card);
+
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .today-card {
+
+    border: 2px solid rgba(227, 6, 19, 0.20);
+  }
+
+  button {
+
+    box-shadow:
+      0 8px 24px rgba(227,6,19,0.40);
+  }
+}
