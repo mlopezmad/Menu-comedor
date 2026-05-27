@@ -18,10 +18,24 @@ body {
   margin: 0;
   padding: 0;
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    sans-serif;
+
   background:
-    radial-gradient(circle at top right, rgba(227,6,19,0.16), transparent 32%),
-    linear-gradient(180deg, #f3e7dc 0%, #f7efe7 45%, #fbf8f3 100%);
+    radial-gradient(
+      circle at top right,
+      rgba(227,6,19,0.16),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      #f3e7dc 0%,
+      #f7efe7 45%,
+      #fbf8f3 100%
+    );
 }
 
 body {
@@ -32,11 +46,35 @@ body {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding: env(safe-area-inset-top) 22px calc(40px + env(safe-area-inset-bottom));
+
+  padding:
+    env(safe-area-inset-top)
+    22px
+    calc(40px + env(safe-area-inset-bottom));
 }
+
+/* CABECERA */
 
 .hero {
   margin-top: 10px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.mahou-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.topbar .eyebrow {
+  margin: 0;
 }
 
 .eyebrow {
@@ -55,6 +93,8 @@ h1 {
   margin: 0 0 24px 0;
   font-weight: 900;
 }
+
+/* TARJETAS */
 
 .card {
   background: var(--card);
@@ -98,6 +138,8 @@ h1 {
   font-weight: 600;
 }
 
+/* SEMANA */
+
 .week {
   margin-top: 10px;
 }
@@ -113,22 +155,6 @@ h1 {
   margin: 0;
   font-size: 32px;
   font-weight: 900;
-}
-
-button {
-  appearance: none;
-  border: none;
-  border-radius: 999px;
-  background: var(--red);
-  color: white;
-  padding: 14px 24px;
-  font-size: 18px;
-  font-weight: 800;
-  box-shadow: 0 6px 18px rgba(227,6,19,0.25);
-}
-
-button:active {
-  transform: scale(0.98);
 }
 
 .week-list {
@@ -167,6 +193,30 @@ button:active {
   border: 3px solid var(--red);
 }
 
+/* BOTÓN */
+
+button {
+  appearance: none;
+  border: none;
+  border-radius: 999px;
+  background: var(--red);
+  color: white;
+
+  padding: 14px 24px;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  box-shadow:
+    0 6px 18px rgba(227,6,19,0.25);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* FOOTER */
+
 .footer {
   margin-top: 26px;
   color: var(--muted);
@@ -174,7 +224,10 @@ button:active {
   line-height: 1.5;
 }
 
+/* MÓVIL */
+
 @media (max-width: 700px) {
+
   h1 {
     font-size: 72px;
   }
@@ -190,5 +243,10 @@ button:active {
   button {
     font-size: 16px;
     padding: 12px 20px;
+  }
+
+  .mahou-logo {
+    width: 36px;
+    height: 36px;
   }
 }
