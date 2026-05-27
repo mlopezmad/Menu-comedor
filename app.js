@@ -26,14 +26,31 @@ function claveDeHoy() {
   return dias[new Date().getDay()];
 }
 
-function fechaBonita() {
-  const fecha = new Intl.DateTimeFormat("es-ES", {
+function formatearFecha(fecha) {
+  const texto = new Intl.DateTimeFormat("es-ES", {
     weekday: "long",
     day: "numeric",
     month: "long"
-  }).format(new Date());
+  }).format(fecha);
 
-  return fecha.charAt(0).toUpperCase() + fecha.slice(1);
+  return texto.charAt(0).toUpperCase() + texto.slice(1);
+}
+
+function fechaBonita() {
+  return formatearFecha(new Date());
+}
+
+function fechaParaDiaSemana(dia) {
+  const hoy = new Date();
+  const indiceHoy = hoy.getDay();
+  const indiceDia = dias.indexOf(dia);
+
+  const diferencia = indiceDia - indiceHoy;
+
+  const fecha = new Date(hoy);
+  fecha.setDate(hoy.getDate() + diferencia);
+
+  return formatearFecha(fecha);
 }
 
 function pintarFecha() {
@@ -135,7 +152,7 @@ async function cargarMenu() {
       }
 
       card.innerHTML = `
-        <h2>${nombresBonitos[dia]}</h2>
+        <h2>${fechaParaDiaSemana(dia)}</h2>
         ${pintarBloque(menu)}
       `;
 
