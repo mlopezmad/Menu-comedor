@@ -129,3 +129,26 @@ button {
   font-size: 13px;
   line-height: 1.4;
 }
+.today-card h3 {
+  margin: 18px 0 8px;
+  font-size: 26px;
+}
+
+.today-card ul {
+  margin: 0 0 18px 22px;
+  padding-left: 18px;
+}
+
+.today-card li {
+  margin: 4px 0;
+  line-height: 1.25;
+  font-size: 24px;
+}
+
+.today-card {
+  padding: 28px 26px;
+}
+
+.menu-text {
+  margin-top: 12px;
+}
