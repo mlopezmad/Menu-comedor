@@ -20,114 +20,64 @@ html,
 body {
   margin: 0;
   padding: 0;
-
   color: var(--text);
-
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    sans-serif;
-
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
   background:
-    radial-gradient(
-      circle at top right,
-      rgba(227,6,19,0.14),
-      transparent 32%
-    ),
-    linear-gradient(
-      180deg,
-      #f3e7dc 0%,
-      #f7efe7 45%,
-      #fbf8f3 100%
-    );
+    radial-gradient(circle at top right, rgba(227,6,19,0.14), transparent 32%),
+    linear-gradient(180deg, #f3e7dc 0%, #f7efe7 45%, #fbf8f3 100%);
 }
 
 body {
   min-height: 100vh;
 }
 
-/* APP */
-
 .app {
   width: 100%;
   max-width: 900px;
-
   margin: 0 auto;
-
-  padding:
-    env(safe-area-inset-top)
-    22px
-    calc(40px + env(safe-area-inset-bottom));
+  padding: env(safe-area-inset-top) 22px calc(40px + env(safe-area-inset-bottom));
 }
-
-/* HERO */
 
 .hero {
   margin-top: 10px;
   padding-top: 8px;
 }
 
-/* LOGO */
-
 .mahou-logo {
   width: 155px;
   height: auto;
-
   display: block;
-
   margin-bottom: -8px;
 }
 
-/* FECHA */
-
 .eyebrow {
   text-transform: uppercase;
-
   letter-spacing: 0.12em;
-
   font-size: 18px;
-
   font-weight: 800;
-
   color: #b32025;
-
   margin: 0 0 4px 0;
 }
 
-/* TITULO */
-
 h1 {
   font-size: clamp(48px, 8vw, 72px);
-
   line-height: 0.9;
-
   letter-spacing: -4px;
-
   margin: 0 0 20px 0;
-
   font-weight: 900;
 }
 
-/* TARJETAS */
-
 .card {
   background: var(--card);
-
   backdrop-filter: blur(12px);
-
   border-radius: var(--radius);
-
   border: 1px solid var(--border);
-
   box-shadow: var(--shadow);
-
   padding: 26px;
 }
 
 .today-card {
   margin-bottom: 28px;
-
   border: 2px solid rgba(227, 6, 19, 0.10);
 }
 
@@ -139,35 +89,32 @@ h1 {
   margin-top: 0;
 }
 
-/* BLOQUES MENU */
-
 .today-card h3 {
   margin: 12px 0 6px 0;
-
   font-size: 26px;
-
   line-height: 1.1;
-
   font-weight: 900;
 }
 
 .today-card ul {
   margin: 0 0 14px 24px;
-
   padding: 0;
 }
 
 .today-card li {
   margin: 2px 0;
-
   line-height: 1.24;
-
   font-size: 24px;
-
   font-weight: 600;
 }
 
-/* SEMANA */
+.updated {
+  margin: 12px 0 24px 0;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0.85;
+}
 
 .week {
   margin-top: 10px;
@@ -175,60 +122,37 @@ h1 {
 
 .section-title {
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   margin-bottom: 18px;
 }
 
 .section-title h2 {
   margin: 0;
-
   font-size: 32px;
-
   font-weight: 900;
 }
 
-/* BOTON */
-
 button {
   appearance: none;
-
   border: none;
-
   border-radius: 999px;
-
   background: var(--red);
-
   color: white;
-
   padding: 14px 24px;
-
   font-size: 18px;
-
   font-weight: 800;
-
-  box-shadow:
-    0 8px 22px rgba(227,6,19,0.28);
-
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease;
+  box-shadow: 0 8px 22px rgba(227,6,19,0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 button:active {
   transform: scale(0.98);
 }
 
-/* LISTA SEMANA */
-
 .week-list {
   display: flex;
-
   flex-direction: column;
-
   gap: 18px;
 }
 
@@ -238,54 +162,67 @@ button:active {
 
 .week-list .card h2 {
   margin: 0 0 14px 0;
-
   font-size: 30px;
-
   font-weight: 900;
 }
 
 .week-list h3 {
   margin: 14px 0 6px 0;
-
   font-size: 22px;
 }
 
 .week-list ul {
   margin: 0 0 10px 22px;
-
   padding: 0;
 }
 
 .week-list li {
   margin: 2px 0;
-
   line-height: 1.2;
-
   font-size: 20px;
 }
-
-/* DIA ACTUAL */
 
 .actual {
   border: 3px solid var(--red);
 }
 
-/* FOOTER */
+/* COMPARTIR APP */
+
+.share-app {
+  margin-top: 34px;
+  text-align: center;
+}
+
+.share-app h2 {
+  margin: 0 0 10px 0;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.share-app p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.4;
+  margin: 0 0 18px 0;
+}
+
+.qr-image {
+  width: 220px;
+  max-width: 80%;
+  border-radius: 24px;
+  background: white;
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
 
 .footer {
   margin-top: 26px;
-
   color: var(--muted);
-
   font-size: 16px;
-
   line-height: 1.5;
 }
 
-/* MOVIL */
-
 @media (max-width: 700px) {
-
   .mahou-logo {
     width: 130px;
   }
@@ -304,69 +241,39 @@ button:active {
 
   button {
     font-size: 16px;
-
     padding: 12px 20px;
   }
 }
+
 /* MODO OSCURO */
 
 @media (prefers-color-scheme: dark) {
-
   :root {
-
     --bg: #111111;
-
     --card: rgba(28,28,30,0.92);
-
     --text: #f5f5f7;
-
     --muted: #9a9a9f;
-
     --border: rgba(255,255,255,0.06);
-
-    --shadow:
-      0 10px 30px rgba(0,0,0,0.35);
+    --shadow: 0 10px 30px rgba(0,0,0,0.35);
   }
 
   html,
   body {
-
     background:
-      radial-gradient(
-        circle at top right,
-        rgba(227,6,19,0.18),
-        transparent 32%
-      ),
-      linear-gradient(
-        180deg,
-        #111111 0%,
-        #151515 45%,
-        #1b1b1b 100%
-      );
+      radial-gradient(circle at top right, rgba(227,6,19,0.18), transparent 32%),
+      linear-gradient(180deg, #111111 0%, #151515 45%, #1b1b1b 100%);
   }
 
   .card {
-
     background: var(--card);
-
     border: 1px solid rgba(255,255,255,0.05);
   }
 
   .today-card {
-
     border: 2px solid rgba(227, 6, 19, 0.20);
   }
 
   button {
-
-    box-shadow:
-      0 8px 24px rgba(227,6,19,0.40);
+    box-shadow: 0 8px 24px rgba(227,6,19,0.40);
   }
-}
-.updated {
-  margin: 12px 0 24px 0;
-  color: var(--muted);
-  font-size: 15px;
-  font-weight: 600;
-  opacity: 0.85;
 }
