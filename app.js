@@ -89,7 +89,7 @@ async function cargarFechaActualizacion() {
     const fechaCommit = new Date(datos[0].commit.committer.date);
 
     actualizado.textContent =
-      `Menú actualizado el ${formatearFechaCorta(fechaCommit)}`;
+      `Menú semanal actualizado el ${formatearFechaCorta(fechaCommit)}`;
 
   } catch (error) {
     actualizado.textContent =
