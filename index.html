@@ -1,54 +1,60 @@
 <!doctype html>
 <html lang="es">
 <head>
-
   <meta charset="utf-8" />
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#111111" />
-
-  <meta
-    name="apple-mobile-web-app-capable"
-    content="yes"
-  />
-
-  <meta
-    name="apple-mobile-web-app-title"
-    content="Menú Hoy"
-  />
-
-  <meta
-    name="apple-mobile-web-app-status-bar-style"
-    content="black-translucent"
-  />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Menú Hoy" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <link rel="manifest" href="manifest.webmanifest" />
-
-  <link
-    rel="apple-touch-icon"
-    href="icon-192.png"
-  />
-
-  <!-- ICONO PESTAÑA NAVEGADOR -->
-
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="192x192"
-    href="icon-192.png"
-  />
-
-  <link
-    rel="shortcut icon"
-    href="icon-192.png"
-  />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
+  <link rel="shortcut icon" href="icon-192.png" />
 
   <title>Menú Hoy</title>
-
   <link rel="stylesheet" href="style.css" />
-
 </head>
+
+<body>
+  <main class="app">
+
+    <section class="hero">
+      <div class="hero-header">
+        <img src="mahou-logo.png" alt="Mahou" class="mahou-logo" />
+        <p class="eyebrow" id="fecha">Cargando fecha…</p>
+      </div>
+
+      <h1>Menú de hoy</h1>
+
+      <div class="card today-card">
+        <h2 id="dia">Hoy</h2>
+        <div id="contenido-hoy" class="menu-text">Cargando menú…</div>
+      </div>
+
+      <p id="actualizado" class="updated">Comprobando actualización…</p>
+    </section>
+
+    <section class="week">
+      <div class="section-title">
+        <h2>Próximos días</h2>
+        <button id="recargar">Actualizar</button>
+      </div>
+
+      <div id="semana" class="week-list"></div>
+    </section>
+
+    <p class="footer">
+      iPhone/iPad: Compartir → Añadir a pantalla de inicio.
+
+      <br><br>
+
+      Android: Menú ⋮ → Añadir a pantalla de inicio o Instalar aplicación.
+    </p>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
