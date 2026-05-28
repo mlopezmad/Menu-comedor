@@ -1,5 +1,8 @@
 const MENU_URL = "menu.json";
 
+const GITHUB_COMMITS_URL =
+  "https://api.github.com/repos/mlopezmad/Menu-comedor/commits?path=menu.json&per_page=1";
+
 const dias = [
   "domingo",
   "lunes",
@@ -34,6 +37,14 @@ function formatearFecha(fecha) {
   return texto.charAt(0).toUpperCase() + texto.slice(1);
 }
 
+function formatearFechaCorta(fecha) {
+  return new Intl.DateTimeFormat("es-ES", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric"
+  }).format(fecha);
+}
+
 function fechaBonita() {
   return formatearFecha(new Date());
 }
@@ -53,6 +64,37 @@ function fechaParaDiaSemana(dia) {
 
 function pintarFecha() {
   $("fecha").textContent = fechaBonita();
+}
+
+async function cargarFechaActualizacion() {
+  const actualizado = $("actualizado");
+
+  if (!actualizado) return;
+
+  try {
+    const respuesta = await fetch(`${GITHUB_COMMITS_URL}&t=${Date.now()}`, {
+      cache: "no-store"
+    });
+
+    if (!respuesta.ok) {
+      throw new Error("No se pudo consultar GitHub");
+    }
+
+    const datos = await respuesta.json();
+
+    if (!Array.isArray(datos) || datos.length === 0) {
+      throw new Error("Sin datos de actualización");
+    }
+
+    const fechaCommit = new Date(datos[0].commit.committer.date);
+
+    actualizado.textContent =
+      `Menú actualizado el ${formatearFechaCorta(fechaCommit)}`;
+
+  } catch (error) {
+    actualizado.textContent =
+      "No se pudo comprobar la fecha de actualización.";
+  }
 }
 
 function pintarBloque(menu) {
@@ -94,6 +136,7 @@ function diasVisiblesDesdeManana() {
 
 async function cargarMenu() {
   pintarFecha();
+  cargarFechaActualizacion();
 
   try {
     const respuesta = await fetch(`${MENU_URL}?t=${Date.now()}`, {
