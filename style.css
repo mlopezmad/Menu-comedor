@@ -287,7 +287,24 @@ button:active {
     border: 2px solid rgba(227, 6, 19, 0.20);
   }
 
-  button {
+    button {
     box-shadow: 0 8px 24px rgba(227,6,19,0.40);
   }
+}
+
+/* CONTACTO */
+
+.mini-contacto {
+
+  margin: 24px 0 0 0;
+
+  text-align: center;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  opacity: 0.8;
 }
