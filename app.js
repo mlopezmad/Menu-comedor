@@ -153,7 +153,7 @@ async function cargarMenu() {
 
     if (!menuHoy) {
       $("dia").textContent = fechaBonita();
-      $("contenido-hoy").innerHTML = "No hay menú cargado para hoy.";
+      $("contenido-hoy").innerHTML = "El comedor permanece cerrado hoy";
 
       const seccionSemana = document.querySelector(".week");
       seccionSemana.style.display = "none";
