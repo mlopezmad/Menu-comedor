@@ -3,28 +3,19 @@ const MENU_URL = "menu.json";
 const GITHUB_COMMITS_URL =
   "https://api.github.com/repos/mlopezmad/Menu-comedor/commits?path=menu.json&per_page=1";
 
-const dias = [
-  "domingo",
-  "lunes",
-  "martes",
-  "miercoles",
-  "jueves",
-  "viernes",
-  "sabado"
-];
-
-const ordenDiasMenu = [
-  "lunes",
-  "martes",
-  "miercoles",
-  "jueves",
-  "viernes"
-];
-
 const $ = (id) => document.getElementById(id);
 
-function claveDeHoy() {
-  return dias[new Date().getDay()];
+function fechaClave(fecha) {
+  const year = fecha.getFullYear();
+  const month = String(fecha.getMonth() + 1).padStart(2, "0");
+  const day = String(fecha.getDate()).padStart(2, "0");
+
+  return `${year}-${month}-${day}`;
+}
+
+function esFinDeSemana(fecha) {
+  const dia = fecha.getDay();
+  return dia === 0 || dia === 6;
 }
 
 function formatearFecha(fecha) {
@@ -47,19 +38,6 @@ function formatearFechaCorta(fecha) {
 
 function fechaBonita() {
   return formatearFecha(new Date());
-}
-
-function fechaParaDiaSemana(dia) {
-  const hoy = new Date();
-  const indiceHoy = hoy.getDay();
-  const indiceDia = dias.indexOf(dia);
-
-  const diferencia = indiceDia - indiceHoy;
-
-  const fecha = new Date(hoy);
-  fecha.setDate(hoy.getDate() + diferencia);
-
-  return formatearFecha(fecha);
 }
 
 function pintarFecha() {
@@ -102,36 +80,59 @@ function pintarBloque(menu) {
     <div style="margin-top:10px">
 
       <h3 style="margin:0 0 8px 0;">Primeros</h3>
-
       <ul style="margin:0 0 16px 22px; padding:0;">
-        ${menu.primeros.map(x => `<li>${x}</li>`).join("")}
+        ${(menu.primeros || []).map(x => `<li>${x}</li>`).join("")}
       </ul>
 
       <h3 style="margin:0 0 8px 0;">Segundos</h3>
-
       <ul style="margin:0 0 16px 22px; padding:0;">
-        ${menu.segundos.map(x => `<li>${x}</li>`).join("")}
+        ${(menu.segundos || []).map(x => `<li>${x}</li>`).join("")}
       </ul>
 
       <h3 style="margin:0 0 8px 0;">Dieta y plancha</h3>
-
       <ul style="margin:0 0 8px 22px; padding:0;">
-        ${menu.dieta.map(x => `<li>${x}</li>`).join("")}
+        ${(menu.dieta || []).map(x => `<li>${x}</li>`).join("")}
       </ul>
 
     </div>
   `;
 }
 
-function diasVisiblesDesdeManana() {
-  const hoy = claveDeHoy();
-  const indiceHoy = ordenDiasMenu.indexOf(hoy);
-
-  if (indiceHoy === -1) {
-    return ordenDiasMenu;
+function mensajeSinMenu(fecha, menuHoy) {
+  if (esFinDeSemana(fecha)) {
+    return "🍴 El comedor permanece cerrado hoy.";
   }
 
-  return ordenDiasMenu.slice(indiceHoy + 1);
+  if (menuHoy && menuHoy.festivo) {
+    return "🎉 Hoy es festivo. No hay servicio de comedor.";
+  }
+
+  return "⚠️ El menú de hoy no está cargado.";
+}
+
+function proximosDias(datos) {
+  const resultado = [];
+  const hoy = new Date();
+
+  for (let i = 1; i <= 7; i++) {
+    const fecha = new Date(hoy);
+    fecha.setDate(hoy.getDate() + i);
+
+    if (esFinDeSemana(fecha)) continue;
+
+    const clave = fechaClave(fecha);
+    const menu = datos.dias?.[clave];
+
+    if (!menu) continue;
+    if (menu.festivo) continue;
+
+    resultado.push({
+      fecha,
+      menu
+    });
+  }
+
+  return resultado;
 }
 
 async function cargarMenu() {
@@ -148,15 +149,39 @@ async function cargarMenu() {
     }
 
     const datos = await respuesta.json();
-    const hoy = claveDeHoy();
-    const menuHoy = datos[hoy];
 
-    if (!menuHoy) {
+    const hoyFecha = new Date();
+    const hoyClave = fechaClave(hoyFecha);
+    const menuHoy = datos.dias?.[hoyClave];
+
+    if (!menuHoy || menuHoy.festivo) {
       $("dia").textContent = fechaBonita();
-      $("contenido-hoy").innerHTML = "El comedor permanece cerrado hoy";
+      $("contenido-hoy").innerHTML = mensajeSinMenu(hoyFecha, menuHoy);
 
       const seccionSemana = document.querySelector(".week");
-      seccionSemana.style.display = "none";
+      const diasFuturos = proximosDias(datos);
+
+      if (diasFuturos.length === 0) {
+        seccionSemana.style.display = "none";
+        return;
+      }
+
+      seccionSemana.style.display = "block";
+
+      const semana = $("semana");
+      semana.innerHTML = "";
+
+      diasFuturos.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        card.innerHTML = `
+          <h2>${formatearFecha(item.fecha)}</h2>
+          ${pintarBloque(item.menu)}
+        `;
+
+        semana.appendChild(card);
+      });
 
       return;
     }
@@ -166,7 +191,7 @@ async function cargarMenu() {
 
     const semana = $("semana");
     const seccionSemana = document.querySelector(".week");
-    const diasFuturos = diasVisiblesDesdeManana();
+    const diasFuturos = proximosDias(datos);
 
     semana.innerHTML = "";
 
@@ -177,17 +202,13 @@ async function cargarMenu() {
 
     seccionSemana.style.display = "block";
 
-    diasFuturos.forEach(dia => {
-      const menu = datos[dia];
-
-      if (!menu) return;
-
+    diasFuturos.forEach(item => {
       const card = document.createElement("div");
       card.className = "card";
 
       card.innerHTML = `
-        <h2>${fechaParaDiaSemana(dia)}</h2>
-        ${pintarBloque(menu)}
+        <h2>${formatearFecha(item.fecha)}</h2>
+        ${pintarBloque(item.menu)}
       `;
 
       semana.appendChild(card);
