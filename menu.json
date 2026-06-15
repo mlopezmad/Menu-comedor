@@ -1,86 +1,183 @@
-,
-"2026-06-15": {
-  "primeros": [
-    "Lentejas con verduras",
-    "Brócoli rehogado",
-    "Ensalada de temporada"
-  ],
-  "segundos": [
-    "Contramuslos pollo empanado",
-    "Lomo asado en salsa",
-    "Merluza en salsa verde"
-  ],
-  "dieta": [
-    "Primero de dieta",
-    "Carne plancha",
-    "Pescado plancha"
-  ]
-},
+{
+  "dias": {
+    "2026-05-29": {
+      "primeros": [
+        "Arroz negro con sepia",
+        "Crema de calabacín",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Pechuga de pollo plancha",
+        "Callos a la madrileña",
+        "Caella plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
 
-"2026-06-16": {
-  "primeros": [
-    "Judías verdes rehogadas",
-    "Pimientos rellenos bacalao",
-    "Ensalada murciana"
-  ],
-  "segundos": [
-    "Solomillo de cerdo con salsa pimienta",
-    "Magro con tomate",
-    "Rejos a la andaluza"
-  ],
-  "dieta": [
-    "Primero de dieta",
-    "Carne plancha",
-    "Pescado plancha"
-  ]
-},
+    "2026-06-01": {
+      "primeros": [
+        "Lentejas castellanas",
+        "Menestra de verduras",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Pizza italiana",
+        "Contra de ternera asada",
+        "Merluza al horno con verduras asadas"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
 
-"2026-06-17": {
-  "primeros": [
-    "Judías blancas estofadas",
-    "Rollitos de primavera",
-    "Ensalada de pasta"
-  ],
-  "segundos": [
-    "Alitas de pollo",
-    "Oreja en salsa",
-    "Bacalao al horno con patata panaderas"
-  ],
-  "dieta": [
-    "Primero de dieta",
-    "Carne plancha",
-    "Pescado plancha"
-  ]
-},
+    "2026-06-02": {
+      "primeros": [
+        "Brócoli rehogado",
+        "Raviolis de carne con salsa de queso",
+        "Ensalada de tomate aliñado"
+      ],
+      "segundos": [
+        "Chuletas de pavo al ajillo",
+        "Albóndigas a la jardinera",
+        "Boquerones a la andaluza"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
 
-"2026-06-18": {
-  "primeros": [
-    "Jornada gastronómica"
-  ],
-  "segundos": [
-    "Jornada gastronómica"
-  ],
-  "dieta": [
-    "Primero de dieta",
-    "Carne plancha",
-    "Pescado plancha"
-  ]
-},
+    "2026-06-03": {
+      "primeros": [
+        "Sopa de picadillo",
+        "Guisantes a la portuguesa",
+        "Ensalada mixta"
+      ],
+      "segundos": [
+        "Secreto a la plancha con salsa de pimienta",
+        "Ternera con setas",
+        "Dorada a la espalda"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
 
-"2026-06-19": {
-  "primeros": [
-    "Arroz valenciano",
-    "Crema de calabaza",
-    "Ensalada mixta"
-  ],
-  "segundos": [
-    "Empanadillas de atún con huevo frito",
-    "Chuleta de aguja plancha",
-    "Caella plancha"
-  ],
-  "dieta": [
-    "Primero de dieta",
-    "Carne plancha",
-    "Pescado plancha"
-  ]
+    "2026-06-04": {
+      "primeros": [
+        "Fideuá a la marinera",
+        "Crema de verduras",
+        "Ensaladilla alemana"
+      ],
+      "segundos": [
+        "Empanadillas y huevos fritos",
+        "Filete de cerdo a la plancha",
+        "Atún a la plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+
+    "2026-06-05": {
+      "festivo": true
+    },
+
+    "2026-06-15": {
+      "primeros": [
+        "Lentejas con verduras",
+        "Brócoli rehogado",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Contramuslos pollo empanado",
+        "Lomo asado en salsa",
+        "Merluza en salsa verde"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+
+    "2026-06-16": {
+      "primeros": [
+        "Judías verdes rehogadas",
+        "Pimientos rellenos bacalao",
+        "Ensalada murciana"
+      ],
+      "segundos": [
+        "Solomillo de cerdo con salsa pimienta",
+        "Magro con tomate",
+        "Rejos a la andaluza"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+
+    "2026-06-17": {
+      "primeros": [
+        "Judías blancas estofadas",
+        "Rollitos de primavera",
+        "Ensalada de pasta"
+      ],
+      "segundos": [
+        "Alitas de pollo",
+        "Oreja en salsa",
+        "Bacalao al horno con patata panaderas"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+
+    "2026-06-18": {
+      "primeros": [
+        "Jornada gastronómica"
+      ],
+      "segundos": [
+        "Jornada gastronómica"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+
+    "2026-06-19": {
+      "primeros": [
+        "Arroz valenciano",
+        "Crema de calabaza",
+        "Ensalada mixta"
+      ],
+      "segundos": [
+        "Empanadillas de atún con huevo frito",
+        "Chuleta de aguja plancha",
+        "Caella plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    }
+  }
 }
