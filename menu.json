@@ -1,77 +1,5 @@
 {
   "dias": {
-    "2026-06-29": {
-      "primeros": [
-        "Lentejas con chorizo",
-        "Arroz a la cubana",
-        "Ensalada de temporada"
-      ],
-      "segundos": [
-        "Lacón a la gallega",
-        "Jamón de cerdo asado",
-        "Merluza al horno con patatas panaderas"
-      ],
-      "dieta": [
-        "Primero de dieta",
-        "Carne plancha",
-        "Pescado plancha"
-      ]
-    },
-
-    "2026-06-30": {
-      "primeros": [
-        "Guisantes rehogados",
-        "Espaguetis boloñesa",
-        "Torre de cuscús con verduras"
-      ],
-      "segundos": [
-        "Churrasco con patata asada",
-        "Pechugas Villarroy",
-        "Tosta con brandada de bacalao"
-      ],
-      "dieta": [
-        "Primero de dieta",
-        "Carne plancha",
-        "Pescado plancha"
-      ]
-    },
-
-    "2026-07-01": {
-      "primeros": [
-        "Sopa de marisco",
-        "Espinacas con bacon y pasas",
-        "Ensalada mixta"
-      ],
-      "segundos": [
-        "Filete de cerdo a la plancha",
-        "Conejo al ajillo",
-        "Dorada a la plancha"
-      ],
-      "dieta": [
-        "Primero de dieta",
-        "Carne plancha",
-        "Pescado plancha"
-      ]
-    },
-
-    "2026-07-02": {
-      "primeros": [
-        "Judías pintas con oreja",
-        "Canelones rellenos de carne",
-        "Huevos rellenos"
-      ],
-      "segundos": [
-        "Pechuga de pollo con salsa romescu",
-        "Carrilleras en salsa",
-        "Bacalao Orly"
-      ],
-      "dieta": [
-        "Primero de dieta",
-        "Carne plancha",
-        "Pescado plancha"
-      ]
-    },
-
     "2026-07-03": {
       "primeros": [
         "Arroz con rabo y setas",
@@ -82,6 +10,96 @@
         "Croquetas caseras con huevos fritos",
         "Estofado de ternera con verduras",
         "Jurel a la plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+
+    "2026-07-06": {
+      "primeros": [
+        "Lentejas estofadas",
+        "Arroz tres delicias",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Fingers de pollo",
+        "Lomo asado en salsa",
+        "Filetes de lenguado con verduras"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+
+    "2026-07-07": {
+      "primeros": [
+        "Judías verdes rehogadas",
+        "Tallarines carbonara",
+        "Ensalada de escarola"
+      ],
+      "segundos": [
+        "Filete de ternera",
+        "Ragout de pavo con tomate",
+        "Bienmesabe"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+
+    "2026-07-08": {
+      "primeros": [
+        "Revuelto de trigueros y setas",
+        "Milhoja vegetal con queso de cabra",
+        "Ensalada mixta"
+      ],
+      "segundos": [
+        "Somarro en adobo",
+        "Pollo asado a las finas hierbas",
+        "Merluza vizcaína"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+
+    "2026-07-09": {
+      "primeros": [
+        "Sopa de cocido",
+        "Lombarda con manzana y pasas",
+        "Salpicón de marisco"
+      ],
+      "segundos": [
+        "Cocido completo",
+        "Tosta de jamón con tumaca",
+        "Bacaladitos a la romana"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+
+    "2026-07-10": {
+      "primeros": [
+        "Fideuá marinera",
+        "Crema de calabacín",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Huevos rotos con torreznillos",
+        "Salchichas frescas encebolladas",
+        "Colitas de rape en salsa"
       ],
       "dieta": [
         "Primero de dieta",
