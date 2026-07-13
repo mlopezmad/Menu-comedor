@@ -1,95 +1,5 @@
 {
   "dias": {
-    "2026-07-03": {
-      "primeros": [
-        "Arroz con rabo y setas",
-        "Crema de verduras",
-        "Ensalada de temporada"
-      ],
-      "segundos": [
-        "Croquetas caseras con huevos fritos",
-        "Estofado de ternera con verduras",
-        "Jurel a la plancha"
-      ],
-      "dieta": [
-        "Primero de dieta",
-        "Carne plancha",
-        "Pescado plancha"
-      ]
-    },
-
-    "2026-07-06": {
-      "primeros": [
-        "Lentejas estofadas",
-        "Arroz tres delicias",
-        "Ensalada de temporada"
-      ],
-      "segundos": [
-        "Fingers de pollo",
-        "Lomo asado en salsa",
-        "Filetes de lenguado con verduras"
-      ],
-      "dieta": [
-        "Primero de dieta",
-        "Carne plancha",
-        "Pescado plancha"
-      ]
-    },
-
-    "2026-07-07": {
-      "primeros": [
-        "Judías verdes rehogadas",
-        "Tallarines carbonara",
-        "Ensalada de escarola"
-      ],
-      "segundos": [
-        "Filete de ternera",
-        "Ragout de pavo con tomate",
-        "Bienmesabe"
-      ],
-      "dieta": [
-        "Primero de dieta",
-        "Carne plancha",
-        "Pescado plancha"
-      ]
-    },
-
-    "2026-07-08": {
-      "primeros": [
-        "Revuelto de trigueros y setas",
-        "Milhoja vegetal con queso de cabra",
-        "Ensalada mixta"
-      ],
-      "segundos": [
-        "Somarro en adobo",
-        "Pollo asado a las finas hierbas",
-        "Merluza vizcaína"
-      ],
-      "dieta": [
-        "Primero de dieta",
-        "Carne plancha",
-        "Pescado plancha"
-      ]
-    },
-
-    "2026-07-09": {
-      "primeros": [
-        "Sopa de cocido",
-        "Lombarda con manzana y pasas",
-        "Salpicón de marisco"
-      ],
-      "segundos": [
-        "Cocido completo",
-        "Tosta de jamón con tumaca",
-        "Bacaladitos a la romana"
-      ],
-      "dieta": [
-        "Primero de dieta",
-        "Carne plancha",
-        "Pescado plancha"
-      ]
-    },
-
     "2026-07-10": {
       "primeros": [
         "Fideuá marinera",
@@ -100,6 +10,96 @@
         "Huevos rotos con torreznillos",
         "Salchichas frescas encebolladas",
         "Colitas de rape en salsa"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+
+    "2026-07-13": {
+      "primeros": [
+        "Lentejas castellanas",
+        "Menestra de verduras",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Libritos de lomo con jamón y queso",
+        "Contra de ternera asada",
+        "Merluza al horno con verduras asadas"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+
+    "2026-07-14": {
+      "primeros": [
+        "Brócoli rehogado",
+        "Falso risotto con setas",
+        "Ensalada de queso"
+      ],
+      "segundos": [
+        "Pechuga de pollo a la plancha",
+        "Albóndigas con tomate",
+        "Boquerones a la andaluza"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+
+    "2026-07-15": {
+      "primeros": [
+        "Sopa castellana",
+        "Guisantes a la portuguesa",
+        "Ensalada mixta"
+      ],
+      "segundos": [
+        "Secreto a la plancha",
+        "Ternera con setas",
+        "Lubina a la plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+
+    "2026-07-16": {
+      "primeros": [
+        "Fabada asturiana",
+        "Revuelto de morcilla",
+        "Ensaladilla alemana"
+      ],
+      "segundos": [
+        "Musaka",
+        "Filete de cerdo a la madrileña",
+        "Dorada a la plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+
+    "2026-07-17": {
+      "primeros": [
+        "Arroz campero",
+        "Crema de verduras",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Empanada de atún",
+        "Callos a la madrileña",
+        "Atún plancha"
       ],
       "dieta": [
         "Primero de dieta",
