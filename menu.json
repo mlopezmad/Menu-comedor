@@ -1,5 +1,90 @@
 {
   "dias": {
+    "2026-06-22": {
+      "primeros": [
+        "Lentejas Estofadas al curry",
+        "Guisantes Rehogados",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Cinta de lomo al ajillo con pimientos",
+        "Rotti De Pavo",
+        "Fritura Variada"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-06-23": {
+      "primeros": [
+        "Coliflor Ajo Arriero",
+        "Pastel De Carne",
+        "Ensalada Italina"
+      ],
+      "segundos": [
+        "Chuleta De Sajonia",
+        "Cachopo De Pollo asturiano",
+        "Colitas de rape en salsa verde"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-06-24": {
+      "primeros": [
+        "Sopa De Minestrone",
+        "Acelgas Rehogadas",
+        "Ensalada mixta"
+      ],
+      "segundos": [
+        "Entrecot A La Parrilla",
+        "Pollo Asado a la cerveza",
+        "Merluza a la gallega"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-06-25": {
+      "primeros": [
+        "Puchero De Garbanzos",
+        "Revuelto de morcilla y setas",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Somarro Adobado",
+        "Salchichas frescas a la miel y mostaza",
+        "Lubina A La Espalda"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-06-26": {
+      "primeros": [
+        "Arroz Caldoso De Marisco",
+        "Crema de verduras",
+        "Ensalada De Judias Con Vinagreta"
+      ],
+      "segundos": [
+        "Huevos rotos con picadillo de chorizo",
+        "Burritos De Pollo",
+        "Salmón Plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
     "2026-07-10": {
       "festivo": false,
       "primeros": [
