@@ -277,6 +277,91 @@
         "Carne plancha",
         "Pescado plancha"
       ]
+    },
+    "2026-07-27": {
+      "primeros": [
+        "Lentejas Con Chorizo",
+        "Pizza Italiana",
+        "Ensalada De Temporada"
+      ],
+      "segundos": [
+        "Contramuslo de pollo empanado",
+        "Lomo Adobado Con Pimiento",
+        "Caella Plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-07-28": {
+      "primeros": [
+        "Judias Verdes Rehogadas",
+        "Pasta Con Verduras",
+        "Ensalada De Arroz"
+      ],
+      "segundos": [
+        "Chuleta De Sajonia",
+        "Atún Con Tomate",
+        "Calamares a la andaluza"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-07-29": {
+      "primeros": [
+        "Pisto Con Huevo Frito",
+        "Pimientos rellenos de bacalao",
+        "Ensalada mixta"
+      ],
+      "segundos": [
+        "Costillas Cerdo Barbacoa",
+        "Oreja En Salsa",
+        "Verduras Asadas"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-07-30": {
+      "primeros": [
+        "Puchero De Garbanzos",
+        "Rollitos De Primavera",
+        "Ensaladilla alemana"
+      ],
+      "segundos": [
+        "Hamburguesa completa de bagazo",
+        "Alitas De Pollo",
+        "Potón A La Plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-07-31": {
+      "primeros": [
+        "Arroz Caldoso Marinero",
+        "Crema de verduras",
+        "Ensalada De Temporada"
+      ],
+      "segundos": [
+        "Ournons Con Huevo",
+        "Salchicha alemana con puré de patata",
+        "Trucha a La Navarra"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
     }
   }
 }
