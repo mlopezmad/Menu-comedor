@@ -1,5 +1,90 @@
 {
   "dias": {
+    "2026-02-16": {
+      "primeros": [
+        "Lentejas estofadas al curry",
+        "Coliflor al ajo arriero",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Lomo al ajillo con pimientos",
+        "Rotti de pavo",
+        "Lubina al horno"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-02-17": {
+      "primeros": [
+        "Panache de verduras",
+        "Pasta con espinacas y bacón",
+        "Ensalada italiana"
+      ],
+      "segundos": [
+        "Lomo de Sajonia al horno",
+        "Pechuga de pollo al horno",
+        "Salmón al horno"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-02-18": {
+      "primeros": [
+        "Marmitako de calamar",
+        "Acelgas rehogadas",
+        "Ensalada mixta"
+      ],
+      "segundos": [
+        "Entrecot a la parrilla",
+        "Salchichas a la mostaza y miel",
+        "Merluza al horno"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-02-19": {
+      "primeros": [
+        "Sopa de cocido",
+        "Alcachofas con jamón",
+        "Ensalada de escarola"
+      ],
+      "segundos": [
+        "Cocido completo",
+        "Tortilla de patata",
+        "Lenguadina a la plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-02-20": {
+      "primeros": [
+        "Arroz valenciano",
+        "Crema de verduras",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Chuletas de aguja al horno",
+        "Burritos de pollo",
+        "Atún con tomate"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
     "2026-06-22": {
       "primeros": [
         "Lentejas Estofadas al curry",
