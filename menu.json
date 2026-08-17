@@ -617,6 +617,91 @@
         "Carne plancha",
         "Pescado plancha"
       ]
+    },
+    "2026-08-17": {
+      "primeros": [
+        "Lentejas estofadas",
+        "Arroz tres delicias",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Fingers de pollo",
+        "Chuleta de Sajonia",
+        "Filetes de lenguado con verduras"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-08-18": {
+      "primeros": [
+        "Judías verdes rehogadas",
+        "Tallarines carbonara",
+        "Ensalada de escarola"
+      ],
+      "segundos": [
+        "Filete de ternera",
+        "Ragout de pavo con tomate",
+        "Bienmesabe"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-08-19": {
+      "primeros": [
+        "Revuelto de trigueros y setas",
+        "Milhoja vegetal con queso de cabra",
+        "Ensalada mixta"
+      ],
+      "segundos": [
+        "Somarro en adobo",
+        "Pollo asado a las finas hierbas",
+        "Merluza vizcaína"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-08-20": {
+      "primeros": [
+        "Puchero de garbanzos",
+        "Alcachofas con jamón",
+        "Salpicón de marisco"
+      ],
+      "segundos": [
+        "Pechuga de pollo plancha",
+        "Tosta de jamón con tumaca",
+        "Fritura variada"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-08-21": {
+      "primeros": [
+        "Fideuá marinera",
+        "Crema de calabacín",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Huevos rotos con chorizo",
+        "Salchichas frescas encebolladas",
+        "Bacalao horno con patatas"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
     }
   }
 }
