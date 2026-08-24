@@ -702,6 +702,91 @@
         "Carne plancha",
         "Pescado plancha"
       ]
+    },
+    "2026-08-24": {
+      "primeros": [
+        "Lentejas castellanas",
+        "Menestra de verduras",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Cinta de lomo adobada con pimientos asados",
+        "Ternera con setas",
+        "Caella a la plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-08-25": {
+      "primeros": [
+        "Brócoli rehogado",
+        "Falso risotto con setas",
+        "Ensalada de queso"
+      ],
+      "segundos": [
+        "Pechuga de pollo a la plancha",
+        "Albóndigas con tomate",
+        "Lubina a la plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-08-26": {
+      "primeros": [
+        "Sopa castellana",
+        "Guisantes a la portuguesa",
+        "Ensalada mixta"
+      ],
+      "segundos": [
+        "Secreto a la plancha",
+        "Musaka",
+        "Atún a la plancha con cebolla caramelizada"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-08-27": {
+      "primeros": [
+        "Fabada asturiana",
+        "Revuelto de morcilla",
+        "Ensaladilla alemana"
+      ],
+      "segundos": [
+        "Tortilla de patatas",
+        "Filete de cerdo a la madrileña",
+        "Dorada a la plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-08-28": {
+      "primeros": [
+        "Arroz campero",
+        "Crema de verduras",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Libritos de lomo con jamón y queso",
+        "Callos a la madrileña",
+        "Empanada de atún"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
     }
   }
 }
