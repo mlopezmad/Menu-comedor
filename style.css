@@ -43,13 +43,6 @@ body {
   padding-top: 8px;
 }
 
-.mahou-logo {
-  width: 155px;
-  height: auto;
-  display: block;
-  margin-bottom: -8px;
-}
-
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -131,23 +124,6 @@ h1 {
   margin: 0;
   font-size: 32px;
   font-weight: 900;
-}
-
-button {
-  appearance: none;
-  border: none;
-  border-radius: 999px;
-  background: var(--red);
-  color: white;
-  padding: 14px 24px;
-  font-size: 18px;
-  font-weight: 800;
-  box-shadow: 0 8px 22px rgba(227,6,19,0.28);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-button:active {
-  transform: scale(0.98);
 }
 
 .week-list {
@@ -237,10 +213,6 @@ button:active {
 }
 
 @media (max-width: 700px) {
-  .mahou-logo {
-    width: 130px;
-  }
-
   h1 {
     font-size: 58px;
   }
@@ -253,10 +225,6 @@ button:active {
     font-size: 18px;
   }
 
-  button {
-    font-size: 16px;
-    padding: 12px 20px;
-  }
 }
 
 /* MODO OSCURO */
@@ -287,9 +255,6 @@ button:active {
     border: 2px solid rgba(227, 6, 19, 0.20);
   }
 
-    button {
-    box-shadow: 0 8px 24px rgba(227,6,19,0.40);
-  }
 }
 
 /* CONTACTO */

@@ -224,7 +224,3 @@ async function cargarMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", cargarMenu);
-
-document
-  .getElementById("recargar")
-  .addEventListener("click", cargarMenu);
