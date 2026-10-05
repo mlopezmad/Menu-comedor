@@ -1201,6 +1201,91 @@
         "Carne plancha",
         "Pescado plancha"
       ]
+    },
+    "2026-10-05": {
+      "primeros": [
+        "Lentejas castellanas",
+        "Menestra de verduras",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Hamburguesa de pollo",
+        "Ternera asada",
+        "Merluza horno con patatas panadera"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-10-06": {
+      "primeros": [
+        "Macarrones con chorizo",
+        "Brócoli a la gallega",
+        "Ensalada de tomate aliñado"
+      ],
+      "segundos": [
+        "Churrasco con patata asada",
+        "Albóndigas en salsa",
+        "Calamares a la andaluza"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-10-07": {
+      "primeros": [
+        "Sopa castellana",
+        "Guisantes a la portuguesa",
+        "Ensalada mixta"
+      ],
+      "segundos": [
+        "Somarro en adobo",
+        "Contramuslos de pollo asados con salsa BBQ",
+        "Dorada a la espalda"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-10-08": {
+      "primeros": [
+        "Judías blancas con chorizo",
+        "Pimientos rellenos de bacalao",
+        "Ensalada de pasta tropical"
+      ],
+      "segundos": [
+        "Chuleta de Sajonia",
+        "Tortilla de patata",
+        "Colitas de rape en salsa verde"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-10-09": {
+      "primeros": [
+        "Arroz campero",
+        "Crema de verduras",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Fajitas de pollo con verdura",
+        "Callos a la madrileña",
+        "Caella plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
     }
   }
 }
