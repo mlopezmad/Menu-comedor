@@ -1286,6 +1286,80 @@
         "Carne plancha",
         "Pescado plancha"
       ]
+    },
+    "2026-10-12": {
+      "festivo": true,
+      "primeros": [],
+      "segundos": [],
+      "dieta": []
+    },
+    "2026-10-13": {
+      "primeros": [
+        "Lentejas con verduras",
+        "Coliflor al ajoarriero",
+        "Ensalada mar y tierra"
+      ],
+      "segundos": [
+        "Filete de ternera",
+        "Jamón asado con patata gajo",
+        "Rejos a la andaluza"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-10-14": {
+      "primeros": [
+        "Espirales tricolor con tomate seco y albahaca",
+        "Acelgas rehogadas",
+        "Ensalada mixta"
+      ],
+      "segundos": [
+        "Secreto a la plancha con salsa pimienta",
+        "Pollo al curry con arroz",
+        "Merluza salsa verde"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-10-15": {
+      "primeros": [
+        "Sopa de cocido",
+        "Alcachofas rehogadas con jamón",
+        "Ensalada con queso fresco y pavo"
+      ],
+      "segundos": [
+        "Cocido completo",
+        "Filete de cerdo a la plancha",
+        "Lenguadina a la plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-10-16": {
+      "primeros": [
+        "Arroz negro con sepia",
+        "Crema de calabaza",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Empanadillas de atún con huevo frito",
+        "Estofado de ternera con verduras",
+        "Bacalao a la riojana"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
     }
   }
 }
