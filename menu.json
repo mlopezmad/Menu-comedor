@@ -1360,6 +1360,91 @@
         "Carne plancha",
         "Pescado plancha"
       ]
+    },
+    "2026-10-19": {
+      "primeros": [
+        "Lentejas estofadas",
+        "Brócoli rehogado",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Pizza bacon con champiñones",
+        "Lomo asado con salsa",
+        "Filetes de lenguado al horno con verduras asadas"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-10-20": {
+      "primeros": [
+        "Falso risotto con setas",
+        "Guisantes rehogados",
+        "Ensalada murciana"
+      ],
+      "segundos": [
+        "Pechuga de pollo con salsa romescu",
+        "Magro con tomate",
+        "Chopitos a la andaluza"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-10-21": {
+      "primeros": [
+        "Pisto con huevo frito",
+        "Canelones de carne gratinados",
+        "Ensalada mixta"
+      ],
+      "segundos": [
+        "Entraña con salsa gaucha",
+        "Costillas BBQ",
+        "Lubina a la espalda"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-10-22": {
+      "primeros": [
+        "Judías pintas con oreja",
+        "Hojaldre de pera con queso azul y miel",
+        "Ensalada alemana"
+      ],
+      "segundos": [
+        "Hamburguesa de bagazo",
+        "Filete de cerdo a la madrileña",
+        "Salmón con cama de tomate concase"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-10-23": {
+      "primeros": [
+        "Arroz con carrilleras y setas",
+        "Crema de verduras",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Croquetas caseras con huevo frito",
+        "Salchichas bratwurst con puré de patata",
+        "Atún con tomate"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
     }
   }
 }
