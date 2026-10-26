@@ -1445,6 +1445,91 @@
         "Carne plancha",
         "Pescado plancha"
       ]
+    },
+    "2026-10-26": {
+      "primeros": [
+        "Lentejas al curry",
+        "Coliflor gratinada",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Lomo al ajillo con pimientos",
+        "Rotti de pavo",
+        "Rabas empanadas"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-10-27": {
+      "primeros": [
+        "Lazos tricolor con bacón, espinacas y nata",
+        "Panaché de verduras",
+        "Ensalada César"
+      ],
+      "segundos": [
+        "Solomillo con salsa pimienta",
+        "Conejo al ajillo",
+        "Salmón a la plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-10-28": {
+      "primeros": [
+        "Fabada asturiana",
+        "Revuelto de morcilla",
+        "Ensalada mixta"
+      ],
+      "segundos": [
+        "Entrecot a la parrilla",
+        "Cachopo asturiano",
+        "Fogonero al horno con verduras asadas"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-10-29": {
+      "primeros": [
+        "MENÚ ESPECIAL · Jornada Gastronómica de Castilla y León",
+        "Aperitivo · Patatas revolconas",
+        "Arroz a la zamorana · Patatas a la importancia · Ensalada berciana"
+      ],
+      "segundos": [
+        "Manitas de cerdo en salsa",
+        "Buñuelos de bacalao",
+        "Postre · Torrijas"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-10-30": {
+      "primeros": [
+        "Crema de puerros",
+        "Lasaña de carne gratinada",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Carne mechada con pan de pita",
+        "Somarro adobado estilo andaluz",
+        "Trucha a la plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
     }
   }
 }
