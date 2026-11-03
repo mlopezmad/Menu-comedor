@@ -1530,6 +1530,80 @@
         "Carne plancha",
         "Pescado plancha"
       ]
+    },
+    "2026-11-02": {
+      "festivo": true,
+      "primeros": [],
+      "segundos": [],
+      "dieta": []
+    },
+    "2026-11-03": {
+      "primeros": [
+        "Lentejas estofadas",
+        "Arroz cinco delicias",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "Pechuga Villarroy",
+        "Lomo de Sajonia",
+        "Filetes de lenguado al horno con verduras"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-11-04": {
+      "primeros": [
+        "Sopa de marisco",
+        "Espinacas con bacón y nata",
+        "Ensalada mixta"
+      ],
+      "segundos": [
+        "Alitas de pollo",
+        "Oreja en salsa",
+        "Pudin de pescado"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-11-05": {
+      "primeros": [
+        "Garbanzos con callos",
+        "Rollitos de primavera",
+        "Torre de cuscús con verduras"
+      ],
+      "segundos": [
+        "Pechuga de pavo plancha",
+        "Carrilleras en salsa",
+        "Sardinas a la madrileña"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
+    },
+    "2026-11-06": {
+      "primeros": [
+        "Arroz caldoso marinero",
+        "Crema de verduras",
+        "Ensalada de temporada"
+      ],
+      "segundos": [
+        "San Jacobos",
+        "Parrillada de carne",
+        "Potón plancha"
+      ],
+      "dieta": [
+        "Primero de dieta",
+        "Carne plancha",
+        "Pescado plancha"
+      ]
     }
   }
 }
