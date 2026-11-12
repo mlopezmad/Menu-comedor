@@ -1640,31 +1640,20 @@
       ]
     },
     "2026-11-11": {
+      "festivo": true,
+      "primeros": [],
+      "segundos": [],
+      "dieta": []
+    },
+    "2026-11-12": {
       "primeros": [
-        "Migas del pastor con huevo frito",
+        "Puchero de garbanzos",
         "Milhoja vegetal",
         "Ensalada mixta"
       ],
       "segundos": [
-        "Libritos de lomo con jamón y queso",
-        "Muslitos de pollo en salsa",
-        "Merluza vizcaína"
-      ],
-      "dieta": [
-        "Primero de dieta",
-        "Carne plancha",
-        "Pescado plancha"
-      ]
-    },
-    "2026-11-12": {
-      "primeros": [
-        "Sopa de cocido",
-        "Alcachofas rehogadas con jamón",
-        "Salpicón de marisco"
-      ],
-      "segundos": [
-        "Cocido completo",
-        "Tosta de solomillo de cerdo y queso brie",
+        "Libritos de lomo jamón y queso",
+        "Tosta de solomillo de cerdo y queso azul",
         "Bacaladitos a la romana"
       ],
       "dieta": [
